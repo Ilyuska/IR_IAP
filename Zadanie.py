@@ -49,7 +49,22 @@ def Menu():
         else:
             print ("Введены некорректные данные, попробуйте снова.")
         Menu()
-    exit("Программа завершена")
+    CloseProgram()
+
+
+def CloseProgram():
+    wannaSave = input("Сохранить изменения базы данных? (Y/N)")
+    if wannaSave == "Y":
+        with open('input.txt', 'w') as file:
+            for i in song_list:
+                file.write(f'{i.artist};{i.title};{i.album};{i.year};{i.duration};{i.listens}\n')
+        exit("Программа завершена с сохранением")
+    elif wannaSave == "N":
+        exit("Программа завершена без сохранения")
+    else:
+        print ("Ввдены некорректные данные") 
+        Menu()
+
 
 
 def Read (): #Считываем весь файл
@@ -114,8 +129,8 @@ def СhangeElement():
     try:
         elem = song_list[ChooseElement(idElem)]
         print(f'Выбранный элемент: \n {elem.artist};{elem.title};{elem.album};{elem.year};{elem.duration};{elem.listens}')
-        song_list.pop(ChooseElement(idElem))
         AddElement()
+        song_list.pop(ChooseElement(idElem))
     except:
         print()
 
@@ -127,7 +142,7 @@ def SortAll(new_list):
         pivot = new_list[len(new_list) // 2]
         left, middle, right = [], [], []
         for x in new_list:
-            if x.artist > pivot.artist:
+            if x.artist < pivot.artist:
                 left.append(x)
             elif x.artist == pivot.artist:
                 if int(x.year) > int(pivot.year):
