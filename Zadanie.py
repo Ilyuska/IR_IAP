@@ -44,7 +44,10 @@ def Menu(): #Рекурсивная функция меню
             for x in song_list: #Создание подсписка нужный исполнителей
                 if x.artist == singer:
                         new_list.append(x)
-            PrintList(SortOneSinger(new_list))
+            if len(new_list)==0:
+                print("Ничего не найдено")
+            else:
+                PrintList(SortOneSinger(new_list))
         elif x == 7:
             years = input("Введите через пробел какие года вас интересуют:\n").strip().split()
             try:
@@ -52,7 +55,11 @@ def Menu(): #Рекурсивная функция меню
                 for x in song_list: #Создание подсписка нужного периода времени
                     if int(years[0]) <= int(x.year) <= int(years[1]):
                         new_list.append(x)
-                PrintList(SortForYears(new_list))
+                if len(new_list)==0:
+                    print("Введены некорректные данные")
+                else:
+                    PrintList(SortForYears(new_list))
+                
             except:
                 print("Введены некорректные данные")
         else:

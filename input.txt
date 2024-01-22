@@ -23,6 +23,7 @@ Elton John;Rocket Man;Honky Château;1972;4:41;160
 Prince;Purple Rain;Purple Rain;1984;8:41;180
 Lady Gaga;Bad Romance;The Fame Monster;2009;4:54;220
 The Rolling Stones;Paint It Black;Aftermath;1966;3:22;180
+Queen;We Will Rock You;News of the World;1977;2:02;120
 Beyoncé;Single Ladies (Put a Ring on It);I Am... Sasha Fierce;2008;3:13;230
 Eagles;Hotel California;Hotel California;1976;6:31;190
 Celine Dion;My Heart Will Go On;Let's Talk About Love;1997;4:41;200
@@ -37,3 +38,5 @@ Justin Bieber;Sorry;Purpose;2015;3:20;230
 Katy Perry;Roar;Prism;2013;3:42;180
 Eminem;Lose Yourself;8 Mile Soundtrack;2002;5:26;220
 Ariana Grande;Thank U, Next;Thank U, Next;2019;3:27;210
+Queen;Somebody to Love;A Day at the Races;1976;4:56;800
+Queen;Lalala;News of the World;1977;2:02;120
